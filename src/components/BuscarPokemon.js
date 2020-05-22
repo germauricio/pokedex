@@ -26,7 +26,7 @@ export default function BuscarPokemon() {
 		});
 
 		var pokemonsFinded= pokemons.filter((pokemon) => 
-			pokemon.name.includes(query)
+			pokemon.name.includes(query.toLowerCase())
 		)
 		setPokemons(pokemonsFinded);
 		console.log(pokemonsFinded);
@@ -34,11 +34,11 @@ export default function BuscarPokemon() {
 
 	return (
 		<div>
-			<h1 class="titulo">Buscar Pokemon</h1>				
+			<h1 class="titulo">Buscar Pokémon</h1>				
 			<label>
 				<input
 					type="text"
-					placeholder="Ingrese un pokemon"
+					placeholder="Ingrese un Pokémon"
 					onChange={ (text) => setQuery(text.target.value) }
 					class = "buscar-caja"/>
 				<button
