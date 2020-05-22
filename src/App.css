@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .container{
     display : flex;
     flex-direction : row; 
@@ -14,6 +16,7 @@
     transition: 1s;
     border-radius: 10%;
 }
+
 .box:hover{
     transform: scale(1.1);
     background: #f31b1b;
@@ -36,8 +39,6 @@
     color:white;
     font-family: 'Press Start 2P', cursive;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .titulo {
     font-family: 'Press Start 2P', cursive;
@@ -74,15 +75,17 @@
     left: 35%;
     height: 60px;
     font-size: 20px;
-  }
-  
-  .buscar-btn:hover {background-color: #8e3e3e}
-  
-  .buscar-btn:active {
+}
+
+.buscar-btn:hover {
+    background-color: #8e3e3e
+}
+
+.buscar-btn:active {
     background-color: #8e3e3e;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}
 
 html, body {
     max-width: 100%;

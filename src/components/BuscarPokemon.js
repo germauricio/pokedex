@@ -26,7 +26,7 @@ export default function BuscarPokemon() {
 		});
 
 		var pokemonsFinded= pokemons.filter((pokemon) => 
-			pokemon.name.startsWith(query)
+			pokemon.name.includes(query)
 		)
 		setPokemons(pokemonsFinded);
 		console.log(pokemonsFinded);
