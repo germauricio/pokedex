@@ -90,4 +90,27 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    height: 100%;
+    margin: 0;
 }
+
+.content {
+    min-height: 100%;
+}
+
+.content-inside {
+    padding: 20px;
+    padding-bottom: 90px;
+}
+
+footer {
+    text-align: center;
+    background-color: #dd2828;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;    
+    height: 50px;
+    margin-top: -90px;
+ }

@@ -7,13 +7,16 @@ class ListarPokemon extends  React.Component {
         return (
             this.props.pokemons
                 .map( ( pokemon ) => {
+
+                    let imageUrl =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
+
                     return(
                         <div class = "box">
 				        	<div class = "col-md-3 col-sm-6">
 						        <div class = "card">
                                     <div class="card-tittle">Nombre: {pokemon.name}</div>
                                     <img 
-                                        src = {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+                                        src = {imageUrl}
                                         class = "pokeImg"
                                         width = "175px"
                                     />
