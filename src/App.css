@@ -1,0 +1,90 @@
+.container{
+    display : flex;
+    flex-direction : row; 
+    justify-content : space-around;
+    flex-flow : wrap;
+    margin: 40px 0px
+}
+
+.box{
+    width: 200px;
+    height: 275px;
+    background: #dd2828;
+    margin: 10px 10px;
+    transition: 1s;
+    border-radius: 10%;
+}
+.box:hover{
+    transform: scale(1.1);
+    background: #f31b1b;
+    z-index: 2;
+    box-shadow: 2px 2px 2px #000;   
+}
+
+.card{
+    text-align: center;
+}
+
+.card-text{
+    margin: 10px 10px;
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.card-tittle{
+    margin: 10px 10px;
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.titulo {
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    left: 31%
+}
+
+.buscar-caja{
+    margin: 20px;
+    width: 190px;
+    height: 60px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #dddddd; 
+    position: relative;
+    left: 33%;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.buscar-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #dd2828;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+    position: relative;
+    left: 35%;
+    height: 60px;
+    font-size: 20px;
+  }
+  
+  .buscar-btn:hover {background-color: #8e3e3e}
+  
+  .buscar-btn:active {
+    background-color: #8e3e3e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
