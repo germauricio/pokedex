@@ -18,6 +18,7 @@ export default function BuscarPokemon() {
 	);
 
 	function searchPokemon(){
+		console.log(resultado)
 		var pokemons = resultado.map( (pokemon, index) => {
 			return ({
 				name: pokemon.name,
@@ -29,7 +30,6 @@ export default function BuscarPokemon() {
 			pokemon.name.includes(query.toLowerCase())
 		)
 		setPokemons(pokemonsFinded);
-		console.log(pokemonsFinded);
 	}
 
 	return (
