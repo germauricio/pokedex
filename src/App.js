@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
-import BuscarPokemon from './components/BuscarPokemon.js';
+import PokemonSearcher from './components/PokemonSearcher.js';
 
 function App() {
-  return <div>
-            <BuscarPokemon />
-         </div>;
+  return <PokemonSearcher />;
 }
 
 export default App;

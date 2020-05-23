@@ -40,7 +40,7 @@
     font-family: 'Press Start 2P', cursive;
 }
 
-.titulo {
+h1 {
     font-family: 'Press Start 2P', cursive;
     position: relative;
     left: 31%
@@ -54,7 +54,7 @@
     outline: none;
     border: 1px solid #dddddd; 
     position: relative;
-    left: 33%;
+    left: 35%;
     font-size: 20px;
     padding-left: 10px;
 }

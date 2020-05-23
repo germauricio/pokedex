@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-class ListarPokemon extends  React.Component {
+class PokemonList extends  React.Component {
 
     render() {
         return (
@@ -29,4 +29,4 @@ class ListarPokemon extends  React.Component {
     };
 }
 
-export default ListarPokemon;
+export default PokemonList;

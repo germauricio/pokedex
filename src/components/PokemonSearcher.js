@@ -1,32 +1,31 @@
 import React, {useState, useEffect} from 'react';
-import ListarPokemon from './ListarPokemon.js'
-import { getPokemones } from '../services.js';
+import PokemonList from './PokemonList.js'
+import { getPokemons } from '../services.js';
 import '../App.css';
 
-export default function BuscarPokemon() {
+export default function PokemonSearcher() {
 	
-	const [resultado, setResultado] = useState([]);
+	const [result, setResult] = useState([]);
 	const [query, setQuery] = useState('');
 	const [pokemons, setPokemons] = useState([]);
 
 	useEffect(() => {
 		(async () => {
-			const res = await getPokemones();
-			setResultado(res);
+			const res = await getPokemons();
+			setResult(res);
 		})()
 	}, []
 	);
 
 	function searchPokemon(){
-		console.log(resultado)
-		var pokemons = resultado.map( (pokemon, index) => {
+		let pokemons = result.map( (pokemon, index) => {
 			return ({
 				name: pokemon.name,
 				id: index+1
 			});
 		});
 
-		var pokemonsFinded= pokemons.filter((pokemon) => 
+		let pokemonsFinded= pokemons.filter((pokemon) => 
 			pokemon.name.includes(query.toLowerCase())
 		)
 		setPokemons(pokemonsFinded);
@@ -34,25 +33,23 @@ export default function BuscarPokemon() {
 
 	return (
 		<div>
-			<h1 class="titulo">Buscar Pokémon</h1>				
+			<h1>Buscar Pokémon</h1>				
 			<label>
 				<input
 					type="text"
 					placeholder="Ingrese un Pokémon"
 					onChange={ (text) => setQuery(text.target.value) }
-					class = "buscar-caja"/>
+					className = "buscar-caja"/>
 				<button
 					type="submit"
 					onClick={ () => {searchPokemon()} }
-					class = "buscar-btn"
+					className = "buscar-btn"
 				>
 					Buscar
 				</button>
 			</label>
-			<div class = "container">
-							<ListarPokemon 
-								pokemons = { pokemons } 
-							/>
+			<div className = "container">
+				<PokemonList pokemons = { pokemons } />
 			</div>
 		</div>
 	);
