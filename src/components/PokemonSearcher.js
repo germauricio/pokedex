@@ -8,6 +8,8 @@ export default function PokemonSearcher() {
 	const [result, setResult] = useState([]);
 	const [query, setQuery] = useState('');
 	const [pokemons, setPokemons] = useState([]);
+	const [searched, setSearched] = useState(false);
+	var content;
 
 	useEffect(() => {
 		(async () => {
@@ -30,24 +32,41 @@ export default function PokemonSearcher() {
 		)
 		setPokemons(pokemonsFinded);
 	}
+	
+	if(!pokemons.length && searched){
+		content = 
+			<div className = "container">
+				<img src ={process.env.PUBLIC_URL + '/notFound.png'}/>
+			</div>;
+	}
+	else{
+		content = 
+		<div className = "container">
+			<PokemonList pokemons = { pokemons } />
+		</div>;
+	}
 
 	return (
 		<div>
-			<h1>Buscar Pokémon</h1>				
-			<input
-				type="text"
-				placeholder="Ingrese un Pokémon"
-				onChange={ (text) => setQuery(text.target.value) }
-				className = "buscar-caja"/>
-			<input
-				type="submit"
-				onClick={ () => {searchPokemon()} }
-				className = "buscar-btn"
-				value="Buscar"
-			/>
-			<div className = "container">
-				<PokemonList pokemons = { pokemons } />
+			<div>
+				<h1>Buscar Pokémon</h1>				
+				<input
+					type="text"
+					placeholder="Ingrese un Pokémon"
+					onChange={ (text) => setQuery(text.target.value) }
+					className = "buscar-caja"/>
+				<input
+					type="submit"
+					onClick={ () => {
+							searchPokemon();
+							setSearched(true);
+						} 
+					}
+					className = "buscar-btn"
+					value="Buscar"
+				/>
 			</div>
+			{content}
 		</div>
 	);
 }
