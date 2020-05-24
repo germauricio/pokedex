@@ -1,11 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PokemonSearcher from '../PokemonSearcher';
-import { render, cleanup} from '@testing-library/react';
+import PokemonList from '../PokemonList';
+import { render, cleanup, getByTestId } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
-it('renders without crashing', () => {
+//this is the pokemon ill use for testing the component
+const pikachu = {
+    name: 'pikachu',
+    id: 25
+};
+
+it('renders fine', () => {
     const div = document.createElement("div");
-    ReactDOM.render(<PokemonSearcher />, div);
+    ReactDOM.render(<PokemonList pokemons={[]} />, div);
+});
+
+it('renders a pokemon', () => {
+    const {getByTestId} = render(<PokemonList pokemons={[pikachu]}/>);
+    expect(getByTestId('pokeID')).toHaveTextContent('25');
+    expect(getByTestId('pokeName')).toHaveTextContent('pikachu');
+});
+
+it('matches with snapshot', () => {
+    const pokeJson = renderer.create(<PokemonList pokemons={[pikachu]}/>);
+    expect(pokeJson).toMatchSnapshot();
 });

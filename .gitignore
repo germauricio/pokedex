@@ -1,2 +1,2 @@
 node_modules/
-
+/src/components/__test__/__snapshots__/

@@ -9,17 +9,17 @@ class PokemonList extends  React.Component {
                 .map( ( pokemon ) => {
                     let imageUrl =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
                     return(
-                        <div class = "box">
-				        	<div class = "col-md-3 col-sm-6">
-						        <div class = "card">
-                                    <div class="card-tittle">Nombre: {pokemon.name}</div>
+                        <div className = "box">
+				        	<div className = "col-md-3 col-sm-6">
+						        <div className = "card" >
+                                    <div className="card-tittle" data-testid = "pokeName">Nombre: {pokemon.name}</div>
                                     <img 
                                         src = {imageUrl}
-                                        class = "pokeImg"
+                                        className = "pokeImg"
                                         width = "175px"
                                         alt="well... this is embarrassing"
                                     />
-                                    <div class="card-text">Id: {pokemon.id}</div>
+                                    <div className="card-text" data-testid = "pokeID">Id: {pokemon.id}</div>
                                 </div>
                             </div>
                         </div>

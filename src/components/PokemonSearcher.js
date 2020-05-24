@@ -34,20 +34,17 @@ export default function PokemonSearcher() {
 	return (
 		<div>
 			<h1>Buscar Pokémon</h1>				
-			<label>
-				<input
-					type="text"
-					placeholder="Ingrese un Pokémon"
-					onChange={ (text) => setQuery(text.target.value) }
-					className = "buscar-caja"/>
-				<button
-					type="submit"
-					onClick={ () => {searchPokemon()} }
-					className = "buscar-btn"
-				>
-					Buscar
-				</button>
-			</label>
+			<input
+				type="text"
+				placeholder="Ingrese un Pokémon"
+				onChange={ (text) => setQuery(text.target.value) }
+				className = "buscar-caja"/>
+			<input
+				type="submit"
+				onClick={ () => {searchPokemon()} }
+				className = "buscar-btn"
+				value="Buscar"
+			/>
 			<div className = "container">
 				<PokemonList pokemons = { pokemons } />
 			</div>
