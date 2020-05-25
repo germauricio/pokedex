@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import PokemonList from './PokemonList.js'
 import { getPokemons } from '../services.js';
 import '../App.css';
@@ -36,7 +36,7 @@ export default function PokemonSearcher() {
 	if(!pokemons.length && searched){
 		content = 
 			<div className = "container">
-				<img src ={process.env.PUBLIC_URL + '/notFound.png'}/>
+				<img data-testid = "notFoundImg" alt ="no pokemon found" src ={process.env.PUBLIC_URL + '/notFound.png'}/>
 			</div>;
 	}
 	else{
@@ -53,16 +53,18 @@ export default function PokemonSearcher() {
 				<input
 					type="text"
 					placeholder="Ingrese un Pokémon"
+					data-testid="searchBox"
 					onChange={ (text) => setQuery(text.target.value) }
-					className = "buscar-caja"/>
+					className = "search-box"/>
 				<input
 					type="submit"
+					data-testid="searchBtn"
 					onClick={ () => {
 							searchPokemon();
 							setSearched(true);
 						} 
 					}
-					className = "buscar-btn"
+					className = "search-btn"
 					value="Buscar"
 				/>
 			</div>
