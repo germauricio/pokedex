@@ -7,7 +7,7 @@ class PokemonList extends  React.Component {
         return (
             this.props.pokemons
                 .map( ( pokemon ) => {
-                    let imageUrl =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
+                    let imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
                     return(
                         <div className = "box" key = {pokemon.id}>
 				        	<div className = "col-md-3 col-sm-6">
@@ -17,7 +17,7 @@ class PokemonList extends  React.Component {
                                         src = {imageUrl}
                                         className = "pokeImg"
                                         width = "175px"
-                                        alt="couldn't load the image"
+                                        alt = {"pokemon " + pokemon.id}
                                     />
                                     <div className="card-text" data-testid = "pokeID">Id: {pokemon.id}</div>
                                 </div>
