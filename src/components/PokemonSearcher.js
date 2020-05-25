@@ -19,7 +19,8 @@ export default function PokemonSearcher() {
 	}, []
 	);
 
-	function searchPokemon(){
+	function searchPokemon(event){
+		event.preventDefault();
 		/*this makes a list with pokemons objects, taking advantage on the way we recieve 
 					the data to give each one their corresponding id*/
 		let pokemons = result.map( (pokemon, index) => {
@@ -55,7 +56,7 @@ export default function PokemonSearcher() {
 
 	return (
 		<div>
-			<div>
+			<form onSubmit= {(event) => searchPokemon(event)}>
 				<h1>Buscar Pokémon</h1>				
 				<input
 					type="text"
@@ -66,15 +67,15 @@ export default function PokemonSearcher() {
 				<input
 					type="submit"
 					data-testid="searchBtn"
-					onClick={ () => {
-							searchPokemon();
+					onClick={ (event) => {
+							searchPokemon(event);
 							setSearched(true);
 						} 
 					}
 					className = "search-btn"
 					value="Buscar"
 				/>
-			</div>
+			</form>
 			{content}
 		</div>
 	);
