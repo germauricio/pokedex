@@ -8,6 +8,10 @@ A pokedex app made with React and consuming PokeAPI
 Node version: 12.16.2
 
 Npm version: 6.14.4
+
+## Install and Run
+
+Clone this repo
 ```
 git clone https://github.com/germauricio/pokedex.git
 ```
