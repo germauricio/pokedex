@@ -3,7 +3,7 @@ A pokedex app made with React and consuming PokeAPI
 
 # How to Run this app
 
-Requisites
+## Requisites
 
 Node version: 12.16.2
 
