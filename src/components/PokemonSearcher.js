@@ -37,6 +37,7 @@ export default function PokemonSearcher() {
 			pokemon.name.includes(query.toLowerCase())
 		)
 		setPokemons(pokemonsFinded);
+		setSearched(true);
 	}
 	/*checking the pokemons getted after querying, if we searched with a query that
 		doesn't matches with any pokemon's name, we get adviced of that*/
@@ -69,7 +70,6 @@ export default function PokemonSearcher() {
 					data-testid="searchBtn"
 					onClick={ (event) => {
 							searchPokemon(event);
-							setSearched(true);
 						} 
 					}
 					className = "search-btn"
