@@ -25,7 +25,7 @@ npm i
 npm start
 ```
 
-# How to Run this app
+# How to run tests
 This app uses React Testing Library. To run tests use the following command
 ```
 npm test
