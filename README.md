@@ -3,7 +3,16 @@ A pokedex app made with React and consuming PokeAPI
 
 # How to Run this app
 
-## With Docker
+Clone this repo
+```
+git clone https://github.com/germauricio/pokedex.git
+```
+Then you get into the repo folder with the following command
+```
+cd pokedex
+```
+
+## Run with Docker
 
 Build the docker image 
 ```
@@ -39,16 +48,6 @@ Node version: 12.16.2
 Npm version: 6.14.4
 
 ## Install and Run
-
-Clone this repo
-```
-git clone https://github.com/germauricio/pokedex.git
-```
-Then you get into the repo folder with the following command
-```
-cd pokedex
-```
-And now proceed with installing and running
 ```
 npm i
 npm start
