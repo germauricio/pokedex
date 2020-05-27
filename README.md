@@ -17,7 +17,7 @@ sudo docker run -it -p 8080:80 pokedex
 
 ```
 
-It will work on your network. So when the terminal shows something like
+It will work on your network, so when the terminal shows something like
 
 ```
 Compiled successfully!
@@ -31,7 +31,7 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 ```
 
-Ctrl+Click on http://172.17.0.2:3000 will work
+Ctrl+Click on http://172.17.0.2:3000 will work!
 
 ## Without Docker
 
