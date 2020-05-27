@@ -8,17 +8,14 @@ A pokedex app made with React and consuming PokeAPI
 Build the docker image 
 ```
 sudo docker build -t pokedex .
-
 ```
-Run the image
 
+Run the image
 ```
 sudo docker run -it -p 8080:80 pokedex 
-
 ```
 
 It will work on your network, so when the terminal shows something like
-
 ```
 Compiled successfully!
 
