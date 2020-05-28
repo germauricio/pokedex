@@ -56,9 +56,9 @@ export default function PokemonSearcher() {
 	}
 
 	return (
-		<div>
-			<form onSubmit= {(event) => searchPokemon(event)}>
-				<h1>Buscar Pokémon</h1>				
+		<div >
+			<h1>Buscar Pokémon</h1>				
+			<form className = "center-form" onSubmit= {(event) => searchPokemon(event)}>
 				<input
 					type="text"
 					placeholder="Ingrese un Pokémon"

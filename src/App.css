@@ -5,7 +5,7 @@
     flex-direction : row; 
     justify-content : space-around;
     flex-flow : wrap;
-    margin: 40px 0px
+    margin: 40px 0px;
 }
 
 .box{
@@ -28,6 +28,10 @@
     text-align: center;
 }
 
+.center-form{
+    text-align: center;
+}
+
 .card-text{
     margin: 10px 10px;
     color:white;
@@ -42,8 +46,8 @@
 
 h1 {
     font-family: 'Press Start 2P', cursive;
-    position: relative;
-    left: 31%
+    width: 100%;
+    text-align: center;
 }
 
 .search-box{
@@ -53,14 +57,11 @@ h1 {
     border-radius: 10px;
     outline: none;
     border: 1px solid #dddddd; 
-    position: relative;
-    left: 35%;
     font-size: 20px;
     padding-left: 10px;
 }
 
 .search-btn {
-    display: inline-block;
     padding: 15px 25px;
     cursor: pointer;
     text-align: center;
@@ -71,10 +72,9 @@ h1 {
     border: none;
     border-radius: 10px;
     box-shadow: 0 9px #999;
-    position: relative;
-    left: 35%;
     height: 60px;
     font-size: 20px;
+    margin-top: 6px;
 }
 
 .search-btn:hover {
@@ -113,5 +113,4 @@ footer {
     font-size: 10px;    
     height: 50px;
     margin-top: -90px;
- }
-
+}
