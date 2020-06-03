@@ -58,3 +58,4 @@ This app uses React Testing Library. To run tests use the following command
 ```
 npm test
 ```
+Now using CircleCI!
