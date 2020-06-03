@@ -37,10 +37,5 @@
     "enzyme-to-json": "^3.5.0",
     "jest-dom": "^4.0.0",
     "react-test-renderer": "^16.13.1"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
   }
 }
