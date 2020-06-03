@@ -1,5 +1,5 @@
 # pokedex
-A pokedex app made with React and consuming PokeAPI
+A pokedex application made with React and consuming PokeAPI
 
 # How to Run this app
 
