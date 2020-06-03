@@ -18,7 +18,3 @@ it('renders image when no pokemon found', () => {
     expect(getByTestId('notFoundImg')).toBeInTheDocument()
 })
 
-it('matches with snapshot', () => {
-    const pokeJson = renderer.create(<PokemonSearcher/>);
-    expect(pokeJson).toMatchSnapshot();
-});

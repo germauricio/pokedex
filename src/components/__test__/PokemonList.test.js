@@ -23,7 +23,3 @@ it('renders a pokemon', () => {
     expect(getByTestId('pokeName')).toHaveTextContent('pikachu');
 });
 
-it('matches with snapshot', () => {
-    const pokeJson = renderer.create(<PokemonList pokemons={[pikachu]}/>);
-    expect(pokeJson).toMatchSnapshot();
-});
